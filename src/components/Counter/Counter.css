@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .caja {
+        @apply rounded bg-gray-200 p-4 inline-block border border-gray-800;
+    }
+}

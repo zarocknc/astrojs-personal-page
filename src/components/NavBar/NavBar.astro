@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon";
+const navbarlinks = [
+    {
+        title: "Home",
+        path: "/",
+    },
+    {
+        title: "Descargas",
+        path: "/descargas",
+    },
+    {
+        title: "Blog",
+        path: "/blog",
+    },
+];
+---
+
+<header class="navbar bg-base-100">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+                <Icon name="heroicons-outline:menu-alt-2" />
+            </label>
+            <ul tabindex="0" class="linkList">
+                {
+                    navbarlinks.map((link) => (
+                        <li>
+                            <a href={link.path}>{link.title}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="navbar-center">
+        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+    </div>
+    <div class="navbar-end">
+        <button class="btn btn-ghost btn-circle">
+            <Icon name="mdi:magnify"/>
+        </button>
+        <button class="btn btn-ghost btn-circle">
+            <Icon name="mdi:bell" />
+        </button>
+    </div>
+</header>
+
+<style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer components {
+        .linkList {
+            @apply menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box border-4 border-primary-focus w-52;
+        }
+    }
+</style>
