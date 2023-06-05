@@ -1,12 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Counter from "./../components/Counter/Counter";
+import SvelteExample from "../components/SvelteExample/SvelteExample.svelte";
+import Habilities from "../components/Content/Habilities.astro";
 ---
 
 <Layout title="Bienvenido">
 	<main>
-		<h1 class="text-5xl font-bold">Astro</h1>
+		<h1 class="text-3xl font-bold">Hola 👋 soy Sebastian Nicolas</h1>
 		<br>
+
+		<Habilities />
+
+		<p class="text-3xl"> Solid js reactive element</p>
 		<Counter client:visible/>
+		<p class="text-3xl">Svelte reactive element</p>
+		<SvelteExample client:visible />
+
 	</main>
 </Layout>

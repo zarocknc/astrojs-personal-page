@@ -7,9 +7,9 @@ export default function Counter() {
     const substract = () => setCount(count() - 1);
     return (
         <div class="caja">
-            <button class="btn btn-sm" onClick={substract}> restar</button>
+            <button class="btn btn-sm btn-primary" onClick={substract}> restar</button>
             <span class="badge">{count()}</span>
-            <button class="btn btn-sm" onClick={add}>sumar</button>
+            <button class="btn btn-sm btn-primary" onClick={add}>sumar</button>
         </div>
     )
 }
